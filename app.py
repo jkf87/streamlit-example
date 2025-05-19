@@ -43,7 +43,7 @@ ax1.plot(df['date'], df['temperature'], marker='o', linestyle='-', color='#b3b3b
 # 축 레이블 설정
 ax1.set_xlabel('날짜')
 ax1.set_ylabel('기온, (°C)')
-ax1.set_title('2023 서울시 기온 변화') 
+ax1.set_title('2023 서울시 기온 변화', fontproperties=font_prop) 
 
 ax1.grid(True, linestyle='--', alpha=0.5)
 plt.xticks(rotation=45)
