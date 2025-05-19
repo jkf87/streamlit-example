@@ -23,7 +23,7 @@ df = load_data()
 
 
 # 한글 깨짐 수정을 위해 matplotlib 폰트 지정하기
-plt.rcParams['font.family'] = 'AppleGothic'  # Mac OS용 한글 폰트 , 윈도우는 Malgun Gothic
+plt.rcParams['font.family'] = 'NanumGothic'  # Mac OS용 한글 폰트 , 윈도우는 Malgun Gothic
 plt.rcParams['axes.unicode_minus'] = False   # 마이너스 기호 깨짐 방지
 
 # 1. 월별 기온 변화 (선 그래프)
