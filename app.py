@@ -21,10 +21,16 @@ def load_data():
 
 df = load_data()
 
+from matplotlib import font_manager
 
-# 한글 깨짐 수정을 위해 matplotlib 폰트 지정하기
-plt.rcParams['font.family'] = 'NanumGothic'  # Mac OS용 한글 폰트 , 윈도우는 Malgun Gothic
-plt.rcParams['axes.unicode_minus'] = False   # 마이너스 기호 깨짐 방지
+font_path = "NanumGothic.ttf"  # 같은 디렉토리에 있는 폰트 파일
+fontprop = font_manager.FontProperties(fname=font_path)
+plt.rcParams['font.family'] = fontprop.get_name()
+plt.rcParams['axes.unicode_minus'] = False
+
+# # 한글 깨짐 수정을 위해 matplotlib 폰트 지정하기
+# plt.rcParams['font.family'] = 'NanumGothic'  # Mac OS용 한글 폰트 , 윈도우는 Malgun Gothic
+# plt.rcParams['axes.unicode_minus'] = False   # 마이너스 기호 깨짐 방지
 
 # 1. 월별 기온 변화 (선 그래프)
 st.subheader("1. 월별 기온 변화")
