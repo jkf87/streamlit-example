@@ -22,11 +22,13 @@ def load_data():
 df = load_data()
 
 from matplotlib import font_manager
+# 폰트 파일 경로
+font_path = "NanumGothic.ttf"  # 현재 디렉토리에 있는 폰트
 
-font_path = "NanumGothic.ttf"  # 같은 디렉토리에 있는 폰트 파일
+# 폰트 로딩
 fontprop = font_manager.FontProperties(fname=font_path)
-plt.rcParams['font.family'] = fontprop.get_name()
-plt.rcParams['axes.unicode_minus'] = False
+plt.rcParams['font.family'] = fontprop.get_name()  # 정확한 폰트 이름으로 설정
+plt.rcParams['axes.unicode_minus'] = False  # 마이너스 깨짐 방지
 
 # # 한글 깨짐 수정을 위해 matplotlib 폰트 지정하기
 # plt.rcParams['font.family'] = 'NanumGothic'  # Mac OS용 한글 폰트 , 윈도우는 Malgun Gothic
